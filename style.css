@@ -1,3 +1,5 @@
+/* General */
+
 * {
   margin: 0;
   padding: 0;
@@ -26,11 +28,23 @@ li {
   list-style: none;
 }
 
+input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-weight: bolder;
+  font-size: large;
+  font-family: "Raleway";
+  background-color: transparent;
+}
+
+/* Navbar */
+
 header {
   margin-top: 10px;
 }
 
-.header__nav {
+.navBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,13 +54,13 @@ header {
   height: 50px;
 }
 
-.header__nav ul {
+.navBar ul {
   display: flex;
   justify-content: center;
   margin-right: 80px;
 }
 
-.header__nav ul li {
+.navBar ul li {
   height: 80px;
   display: flex;
   justify-content: center;
@@ -55,12 +69,12 @@ header {
   margin-right: 10px;
 }
 
-.header__nav ul li a:hover {
-  color: blue;
+.navBar ul li a:hover {
+  color: #0065fc;
 }
 
-.header__nav ul li:hover {
-  border-top: 2px solid blue;
+.navBar ul li:hover {
+  border-top: 2px solid #0065fc;
   margin-top: -2px;
 }
 
@@ -69,17 +83,151 @@ header {
   top: 40px;
   width: 80px;
   font-weight: bold;
-  color: blue;
+  color: #0065fc;
   margin-left: 950px;
 }
 
+/* General Title */
+
+.general__title {
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+.general__title h1 {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.general__title h2 {
+  font-size: small;
+  font-weight: 500;
+}
+
+/* Filters */
+.filters {
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+.filters__city {
+  display: flex;
+  border-radius: 15px;
+  width: 400px;
+}
+
+.filters__city div {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f2f2f2;
+}
+
+.filters__city div:nth-child(1) {
+  width: 15%;
+  background-color: #f2f2f2;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.filters__city div:nth-child(2) {
+  width: 45%;
+}
+
+.filters__city div:nth-child(3) {
+  width: 40%;
+  background-color: #0065fc;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.filters__city div:nth-child(3) input {
+  color: white;
+}
+
+/* Filters Categories */
+
+.filters__categories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filters__categories h3 {
+  margin-right: 20px;
+}
+
+.categories__button {
+  display: flex;
+  align-items: center;
+  border: 2px solid #f2f2f2;
+  border-radius: 40px;
+  margin-right: 10px;
+}
+
+.categories__button div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -1.5px;
+}
+
+.categories__button div i.fas {
+  color: #0065fc;
+}
+
+.categories__button div:nth-child(1) {
+  background-color: #deebff;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.categories__button div:nth-child(2) {
+  margin-left: 10px;
+  margin-right: 20px;
+  font-weight: bolder;
+}
+
+/* info */
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+.info div:nth-child(1) {
+  border: 2px solid #f2f2f2;
+  text-align: center;
+  border-radius: 13px;
+  height: 22px;
+  width: 22px;
+}
+
+.info div:nth-child(2) {
+  margin-left: 10px;
+}
+
+.fas.fa-info {
+  color: #0065fc;
+  font-size: small;
+  margin: 0;
+}
+
 @media screen and (max-width: 376px) {
+  /* General */
+
   body {
     width: 375px;
     margin: 0 auto;
   }
 
-  .header__nav {
+  /* Navbar */
+
+  .navBar {
     flex-wrap: wrap;
   }
 
@@ -87,20 +235,20 @@ header {
     height: 40px;
   }
 
-  .header__nav ul {
+  .navBar ul {
     margin: 0;
     width: 375px;
     border-bottom: 2px solid lightgray;
   }
 
-  .header__nav ul li:hover {
+  .navBar ul li:hover {
     border-top: 0px;
     margin-top: 0;
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid #0065fc;
     margin-bottom: -2px;
   }
 
-  .header__nav ul li {
+  .navBar ul li {
     height: 40px;
     width: 50%;
   }
@@ -108,5 +256,19 @@ header {
   .signup__link {
     top: 22px;
     margin-left: 290px;
+  }
+
+  /* Filters */
+
+  .filters__categories h3 {
+    margin-right: 200px;
+    margin-bottom: 10px;
+  }
+
+  .categories__button {
+    margin-bottom: 10px;
+  }
+
+  .filters__city div:nth-child(3).class {
   }
 }
