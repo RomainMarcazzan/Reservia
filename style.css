@@ -217,6 +217,144 @@ header {
   margin: 0;
 }
 
+/* Main */
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.main__results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  width: 68%;
+  padding: 10px;
+}
+
+.main__results h1 {
+  margin: 10px;
+}
+
+.main__results__container {
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-vertical {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 4px 4px 10px lightgray;
+}
+
+.card-vertical div img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 100px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.card-vertical div h2 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.card-vertical div p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.price {
+  font-weight: bold;
+}
+.card-vertical div p i {
+  color: #0065fc;
+  font-size: 10px;
+}
+
+.see-more {
+  margin: 20px;
+}
+
+.see-more a {
+  color: black;
+  font-weight: bold;
+  font-size: large;
+}
+
+/* Popular */
+.popular {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  width: 25%;
+  padding: 15px;
+  justify-content: space-around;
+}
+
+.popular__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-horizontal {
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  align-items: center;
+  padding: 6px;
+  box-shadow: 4px 4px 10px lightgray;
+}
+
+.card-horizontal img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.card-horizontal div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.card-horizontal div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+
+.card-horizontal div h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-horizontal__subtitle {
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.card-horizontal div p i {
+  font-size: 10px;
+  color: #0065fc;
+}
+
 @media screen and (max-width: 376px) {
   /* General */
 
