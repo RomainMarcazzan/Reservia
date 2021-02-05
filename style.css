@@ -32,8 +32,7 @@ input {
   width: 100%;
   height: 100%;
   border: none;
-  font-weight: bolder;
-  font-size: large;
+  font-weight: bold;
   font-family: "Raleway";
   background-color: transparent;
 }
@@ -114,7 +113,7 @@ header {
 .filters__city {
   display: flex;
   border-radius: 15px;
-  width: 400px;
+  width: 370px;
 }
 
 .filters__city div {
@@ -126,18 +125,18 @@ header {
 }
 
 .filters__city div:nth-child(1) {
-  width: 15%;
+  width: 10%;
   background-color: #f2f2f2;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
 .filters__city div:nth-child(2) {
-  width: 45%;
+  width: 65%;
 }
 
 .filters__city div:nth-child(3) {
-  width: 40%;
+  width: auto;
   background-color: #0065fc;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -145,6 +144,12 @@ header {
 
 .filters__city div:nth-child(3) input {
   color: white;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.filters__city div:nth-child(3) i {
+  display: none;
 }
 
 /* Filters Categories */
@@ -355,6 +360,122 @@ header {
   color: #0065fc;
 }
 
+/* Activities */
+
+.activities {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.activities__results__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.activities__card h2 {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.activities__card {
+  box-shadow: 4px 4px 10px lightgray;
+  border-radius: 15px;
+}
+
+.activities__card img {
+  width: 230px;
+}
+
+.activities__results__container h2 {
+  height: 20px;
+}
+
+.Column1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.Column1 img {
+  height: 300px;
+}
+
+.Column2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Column2 div:nth-child(1) img {
+  height: 130px;
+}
+
+.Column2 div:nth-child(2) img {
+  height: 90px;
+}
+
+.Column3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.Column3 img {
+  height: 300px;
+}
+
+.Column4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Column4 div:nth-child(1) img {
+  height: 100px;
+}
+
+.Column4 div:nth-child(2) img {
+  height: 120px;
+}
+
+.activities img {
+  /* width: 100%; */
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.column__container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.column__container h2 {
+  font-size: 16px;
+}
+
+.column__container h3 {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.footer__menu__container {
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 376px) {
   /* General */
 
@@ -407,6 +528,86 @@ header {
     margin-bottom: 10px;
   }
 
-  .filters__city div:nth-child(3).class {
+  .filters__city div:nth-child(3) input {
+    display: none;
+  }
+
+  .filters__city div:nth-child(3) i {
+    display: initial;
+    color: white;
+    width: 50px;
+    text-align: center;
+  }
+
+  /* Info */
+
+  .info {
+    margin-right: 5px;
+  }
+
+  /* Main */
+  .main {
+    flex-direction: column;
+    justify-content: none;
+  }
+
+  .main .main__results {
+    order: 2;
+    width: auto;
+    background-color: transparent;
+  }
+
+  .main__results__container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .card-vertical div img {
+    width: 100%;
+  }
+
+  .main .popular {
+    order: 1;
+    width: auto;
+    border-radius: initial;
+  }
+
+  .popular .card-horizontal {
+    padding: 5px;
+    margin-top: 20px;
+  }
+
+  .popular .card-horizontal img {
+    height: 120px;
+  }
+
+  /* Activities */
+
+  .activities h1 {
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  .activities__results__container {
+    flex-direction: column;
+    justify-content: none;
+    align-items: center;
+  }
+
+  .activities__card {
+    margin-top: 15px;
+  }
+
+  .activities__card img {
+    width: 360px;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+  }
+
+  .column__container {
+    margin-top: 20px;
   }
 }
