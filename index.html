@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./icons/all.min.css" />
     <title>
       Reservia - Trouvez votre hébergement pour des vacances de rêve
     </title>
   </head>
   <body>
     <header>
+      <!-- Navbar -->
       <nav class="navbar">
         <img
           class="navbar__img"
@@ -23,6 +25,73 @@
           <li class="navbar__ulist__elt"><a href="#">Activités</a></li>
         </ul>
       </nav>
+
+      <section>
+        <!-- Title & Subtitle -->
+        <h1 class="header_title">
+          Trouvez votre hébergement pour des vacances de rêve
+        </h1>
+        <h2 class="header_subtitle">
+          En plein centre ville ou en pleine nature
+        </h2>
+      </section>
+
+      <section>
+        <!-- Searchbar -->
+        <form class="searchbar" action="#" method="POST">
+          <div class="searchbar__marker">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <input
+            class="searchbar__input"
+            type="search"
+            value=" Marseille, France"
+          />
+          <button class="searchbar__button" type="submit">Rechercher</button>
+          <button class="searchbar__button--icon" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <!-- Filters -->
+        <ul class="filters">
+          <h3>Filtres</h3>
+          <li class="filters__category">
+            <div class="filters__category--icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <button class="filters__category--button" type="submit">
+              Économique
+            </button>
+          </li>
+          <li class="filters__category">
+            <div class="filters__category--icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <button class="filters__category--button" type="submit">
+              Familial
+            </button>
+          </li>
+          <li class="filters__category">
+            <div class="filters__category--icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <button class="filters__category--button" type="submit">
+              Romantique
+            </button>
+          </li>
+          <li class="filters__category">
+            <div class="filters__category--icon">
+              <i class="fas fa-child"></i>
+            </div>
+            <button class="filters__category--button" type="submit">
+              Animaux autorisés
+            </button>
+          </li>
+        </ul>
+      </section>
     </header>
   </body>
 </html>

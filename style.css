@@ -48,6 +48,10 @@ header {
   font-weight: bold;
 }
 
+.navbar__signup a:hover {
+  color: black;
+}
+
 .navbar__ulist {
   list-style: none;
   display: flex;
@@ -97,5 +101,146 @@ header {
     margin-top: initial;
     border-bottom: 2px solid #0065fc;
     margin-bottom: -2px;
+  }
+}
+
+/* Title */
+.header_title {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.header_subtitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* SearchBar */
+
+.searchbar {
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.searchbar__marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  height: 100%;
+  background-color: #f2f2f2;
+  border-radius: 10px 0 0 10px;
+}
+
+.searchbar__input {
+  width: 55%;
+  height: 98%;
+  font-size: 16px;
+  border: none;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.searchbar__button {
+  display: block;
+  width: 30%;
+  background-color: #0065fc;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  color: white;
+  border: transparent;
+}
+
+.searchbar__button--icon {
+  display: none;
+}
+
+/* Responsive Mobil searchbar */
+
+@media screen and (max-width: 425px) {
+  .searchbar {
+    width: auto;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .searchbar__button {
+    display: none;
+  }
+
+  .searchbar__input {
+    width: 70%;
+  }
+
+  .searchbar__button--icon {
+    display: block;
+    width: 15%;
+    height: 100%;
+    background-color: #0065fc;
+    color: white;
+    border-radius: 10px;
+    border: none;
+  }
+}
+
+/* Filters */
+
+.filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.filters h3 {
+  font-size: 1rem;
+}
+
+.filters__category {
+  display: flex;
+  align-items: center;
+  border: 2px solid #f2f2f2;
+  border-radius: 40px;
+  margin: 5px;
+}
+
+.filters__category--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -1.5px;
+  background-color: #deebff;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.filters__category--icon i.fas {
+  color: #0065fc;
+}
+
+.filters__category--button {
+  margin-left: 10px;
+  margin-right: 20px;
+  font-weight: bolder;
+  background-color: transparent;
+  border: none;
+  font-family: Raleway;
+}
+
+.filters__category:hover {
+  background-color: #deebff;
+}
+
+/* filters responsive */
+
+@media screen and (max-width: 426px) {
+  .filters h3 {
+    margin-right: 100%;
+    margin-bottom: 5px;
   }
 }
