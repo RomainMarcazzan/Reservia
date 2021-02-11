@@ -17,28 +17,28 @@ a:visited {
 }
 
 body {
-  margin: 0 auto;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
 
 /* NavBar */
 
 .navbar {
+  width: 100%;
+  margin: auto;
   display: flex;
   align-items: center;
   margin-top: 5px;
-  width: 100%;
 }
 
 .navbar__img {
   margin-right: auto;
-  height: 50px;
+  height: 40px;
   margin-left: 5%;
 }
 
 .navbar__signup {
   order: 3;
-  margin-right: 5%;
+  margin-right: 8%;
 }
 
 .navbar__signup a {
@@ -77,9 +77,6 @@ body {
 @media screen and (max-width: 426px) {
   .navbar {
     flex-wrap: wrap;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
   }
 
   .navbar__img {
@@ -180,11 +177,11 @@ body {
 
 /* Responsive Mobil searchbar */
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   .searchbar {
-    width: auto;
-    margin-left: 4%;
-    margin-right: 4%;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
   }
 
   .searchbar__button {
@@ -305,8 +302,8 @@ body {
 /* Main */
 
 .main_container {
-  width: 90%;
   margin: auto;
+  width: 90%;
   display: flex;
   justify-content: space-between;
 }
@@ -318,30 +315,34 @@ body {
   flex-direction: column;
   background-color: #f2f2f2;
   border-radius: 20px;
-  width: 70%;
-  justify-content: space-around;
-  padding: 10px;
+  width: 65%;
+  justify-content: space-evenly;
 }
 
 .results_container h1 {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 10px 0 5px 10px;
+  font-size: 1.2rem;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .see_more {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin: 10px 0 5px 10px;
+  padding-left: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .accomodation_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 25px;
-  row-gap: 25px;
+  column-gap: 15px;
+  row-gap: 15px;
   justify-items: center;
+  width: 90%;
+  margin: auto;
 }
 
 .card {
@@ -354,7 +355,6 @@ body {
 
 .card--vertical {
   flex-direction: column;
-  /* width: 220px; */
 }
 
 .card__image {
@@ -362,14 +362,13 @@ body {
   border-top-right-radius: 20px;
   object-fit: cover;
   width: 100%;
-  height: 120px;
+  height: 100px;
 }
 
 .card__info_container {
   display: flex;
   padding: 10px;
   flex-direction: column;
-  justify-content: center;
 }
 
 .card__title {
@@ -394,9 +393,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
-  width: 25%;
-  justify-content: space-between;
-  padding: 10px;
+  width: 32%;
   border-radius: 20px;
 }
 
@@ -404,33 +401,39 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
-  margin: 10px 0 10px 0;
+  font-size: 0.8rem;
+  width: 80%;
+  margin: auto;
 }
 
 .card--horizontal {
   flex-direction: row;
-  margin: 10px;
+  width: 80%;
+  margin: auto;
+  height: 120px;
 }
 
 .card__image--horizontal {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 0;
-  width: 120px;
-  height: 140px;
+  width: 40%;
+  height: 100%;
 }
 
 .card__star--horizontal {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 /* Main responsive Tablet */
 
-@media screen and (max-width: 1000px) and (min-width: 425px) {
+@media screen and (max-width: 768px) and (min-width: 426px) {
   .main_container {
-    width: 100%;
     flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: unset;
   }
   .results_container {
     width: 90%;
@@ -441,14 +444,19 @@ body {
 
   .popular_container {
     width: 100%;
+    margin: auto;
     order: 1;
-    flex-direction: column;
     border-radius: 0;
   }
 
+  .popular__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .card--horizontal {
-    width: 400px;
-    margin: 10px auto;
+    width: 50%;
+    margin-bottom: 20px;
   }
 }
 
@@ -469,24 +477,32 @@ body {
     padding: 5px;
     background-color: white;
     border-radius: 0;
-    justify-content: none;
   }
 
   .accomodation_container {
     display: flex;
     flex-direction: column;
-    padding: 5px;
-  }
-
-  .card__image {
-    height: 100px;
   }
 
   .popular_container {
     width: 100%;
+    margin: auto;
     order: 1;
-    flex-direction: column;
     margin-bottom: 20px;
     border-radius: 0;
+  }
+
+  .popular__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .card--horizontal {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .card--horizontal {
+    width: 80%;
   }
 }
