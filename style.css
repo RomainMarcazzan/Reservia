@@ -50,12 +50,12 @@ body {
   color: black;
 }
 
-.navbar__ulist {
+.navbar__list {
   list-style: none;
   display: flex;
 }
 
-.navbar__ulist__elt {
+.navbar__item {
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
@@ -63,12 +63,12 @@ body {
   height: 100px;
 }
 
-.navbar__ulist__elt:hover {
+.navbar__item:hover {
   border-top: 2px solid #0065fc;
   margin-top: -2px;
 }
 
-.navbar__ulist__elt a:hover {
+.navbar__item a:hover {
   color: #0065fc;
 }
 
@@ -87,22 +87,19 @@ body {
     margin-right: 5%;
   }
 
-  .navbar__ulist {
+  .navbar__list {
     order: 3;
     width: 100%;
-  }
-
-  .navbar__ulist {
     border-bottom: 2px solid lightgray;
   }
 
-  .navbar__ulist__elt {
+  .navbar__item {
     width: 50%;
     justify-content: center;
     height: 50px;
   }
 
-  .navbar__ulist__elt:hover {
+  .navbar__item:hover {
     border-top: initial;
     margin-top: initial;
     border-bottom: 2px solid #0065fc;
@@ -110,18 +107,19 @@ body {
   }
 }
 
-.title_container {
+/* Title */
+
+.title-container {
   width: 90%;
   margin: auto;
 }
 
-/* Title */
-.header_title {
+.title__big {
   font-size: 1rem;
   margin-top: 20px;
 }
 
-.header_subtitle {
+.title__small {
   font-size: 0.8rem;
   font-weight: 400;
   margin-top: 10px;
@@ -129,7 +127,7 @@ body {
 
 /* SearchBar */
 
-.searchbar_container {
+.searchbar-container {
   width: 90%;
   margin: auto;
 }
@@ -178,7 +176,7 @@ body {
 /* Responsive Mobil searchbar */
 
 @media screen and (max-width: 426px) {
-  .searchbar {
+  .searchbar-container {
     width: 90%;
     margin: auto;
     margin-top: 20px;
@@ -217,7 +215,7 @@ body {
   margin-top: 20px;
 }
 
-.filters h3 {
+.filters__title {
   font-size: 1rem;
 }
 
@@ -229,7 +227,7 @@ body {
   margin: 5px;
 }
 
-.filters__category--icon {
+.filters__category__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,11 +238,11 @@ body {
   height: 40px;
 }
 
-.filters__category--icon i.fas {
+.filters__category__icon i.fas {
   color: #0065fc;
 }
 
-.filters__category--button {
+.filters__category__button {
   margin-left: 10px;
   margin-right: 20px;
   font-weight: bolder;
@@ -260,7 +258,7 @@ body {
 /* filters Mobile responsive */
 
 @media screen and (max-width: 426px) {
-  .filters h3 {
+  .filters__title {
     margin-right: 100%;
     margin-bottom: 5px;
   }
@@ -327,11 +325,15 @@ body {
 }
 
 .see_more {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   padding-left: 40px;
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.see_more:hover {
+  color: #0065fc;
 }
 
 .accomodation_container {
@@ -340,7 +342,7 @@ body {
   grid-template-rows: 1fr 1fr;
   column-gap: 15px;
   row-gap: 15px;
-  justify-items: center;
+  justify-content: center;
   width: 90%;
   margin: auto;
 }
@@ -353,28 +355,25 @@ body {
   padding: 5px;
 }
 
-.card--vertical {
-  flex-direction: column;
-}
-
 .card__image {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
   width: 100%;
-  height: 100px;
+  height: 55%;
 }
 
 .card__info_container {
   display: flex;
-  padding: 10px;
   flex-direction: column;
+  position: relative;
+  padding: 10px;
 }
 
 .card__title {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bold;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 .card__price {
@@ -385,6 +384,15 @@ body {
 .card__star {
   color: #0065fc;
   font-size: 0.6rem;
+}
+
+.card__link:hover {
+  transform: scale(1.1);
+}
+
+.card--vertical {
+  flex-direction: column;
+  height: 185px;
 }
 
 /* Popular Results */
@@ -405,12 +413,17 @@ body {
   width: 80%;
   margin: auto;
 }
+.popular__results_container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
 
 .card--horizontal {
   flex-direction: row;
-  width: 80%;
-  margin: auto;
-  height: 120px;
+  margin-bottom: 20px;
+  height: 130px;
 }
 
 .card__image--horizontal {
@@ -422,7 +435,8 @@ body {
 }
 
 .card__star--horizontal {
-  margin-top: 5px;
+  position: absolute;
+  bottom: 0;
 }
 
 /* Main responsive Tablet */
@@ -431,7 +445,6 @@ body {
   .main_container {
     flex-wrap: wrap;
     width: 100%;
-    margin: auto;
     flex-direction: column;
     justify-content: unset;
   }
@@ -455,7 +468,8 @@ body {
   }
 
   .card--horizontal {
-    width: 50%;
+    width: 70%;
+    margin: auto;
     margin-bottom: 20px;
   }
 }
@@ -465,7 +479,6 @@ body {
 @media screen and (max-width: 426px) {
   .main_container {
     width: 100%;
-    margin: auto;
     justify-content: none;
     flex-direction: column;
   }
@@ -486,23 +499,109 @@ body {
 
   .popular_container {
     width: 100%;
-    margin: auto;
     order: 1;
     margin-bottom: 20px;
     border-radius: 0;
   }
 
-  .popular__title {
-    margin-top: 20px;
+  .card--horizontal {
+    width: 100%;
     margin-bottom: 20px;
   }
+}
 
-  .card--horizontal {
-    width: 50%;
-    margin-bottom: 20px;
-  }
+/* Activities */
 
-  .card--horizontal {
-    width: 80%;
-  }
+.activities_container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.activities_container__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.activities {
+  display: flex;
+}
+
+.activities div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.activities__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px lightgray;
+}
+
+.activities__card__image {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.activities__card__title {
+  font-size: 12px;
+  padding: 10px;
+}
+
+.activities__col1 {
+  margin-left: auto;
+  margin-right: 1%;
+}
+
+.activities__col2,
+.activities__col3 {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.activities__col4 {
+  margin-left: 1%;
+  margin-right: auto;
+}
+
+.activities__col2 div:nth-child(1) {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+.activities__col4 div:nth-child(1) {
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+.activities__col1 div,
+.activities__col3 div {
+  height: 400px;
+}
+
+.activities__col1 img,
+.activities__col3 img {
+  height: 100%;
+}
+
+.activities__col2 div:nth-child(1) img {
+  height: 160px;
+}
+
+.activities__col2 div:nth-child(2) img {
+  height: 90px;
+}
+
+.activities__col4 div:nth-child(1) img {
+  height: 140px;
+}
+
+.activities__col4 div:nth-child(2) img {
+  height: 140px;
 }
