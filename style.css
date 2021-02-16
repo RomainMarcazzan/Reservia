@@ -211,10 +211,13 @@ body {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  list-style: none;
 }
 
 .filters__title {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 20px;
 }
 
 .filters__category {
@@ -582,12 +585,12 @@ body {
   font-weight: bold;
 }
 
-.activities__col2 div:nth-child(1) {
+.activities__col2 a:nth-child(1) {
   margin-top: 0;
   margin-bottom: auto;
 }
 
-.activities__col4 div:nth-child(1) {
+.activities__col4 a:nth-child(1) {
   margin-top: 0;
   margin-bottom: auto;
 }
@@ -602,16 +605,16 @@ body {
   height: 100%;
 }
 
-.activities__col2 div:nth-child(1) .activities__card__image {
+.activities__col2 a:nth-child(1) .activities__card__image {
   height: 160px;
 }
 
-.activities__col2 div:nth-child(2) .activities__card__image {
+.activities__col2 a:nth-child(2) .activities__card__image {
   height: 100px;
 }
 
-.activities__col4 div:nth-child(1) .activities__card__image,
-.activities__col4 div:nth-child(2) .activities__card__image {
+.activities__col4 a:nth-child(1) .activities__card__image,
+.activities__col4 a:nth-child(2) .activities__card__image {
   height: 140px;
 }
 
@@ -637,11 +640,11 @@ body {
     width: 100%;
   }
 
-  .activities__col2 div:nth-child(1) {
+  .activities__col2 a:nth-child(1) {
     margin-bottom: 20px;
   }
 
-  .activities__col4 div:nth-child(1) {
+  .activities__col4 a:nth-child(1) {
     margin-bottom: 20px;
   }
 
@@ -657,16 +660,16 @@ body {
     height: 100px;
   }
 
-  .activities__col2 div:nth-child(1) .activities__card__image {
+  .activities__col2 a:nth-child(1) .activities__card__image {
     height: 100px;
   }
 
-  .activities__col2 div:nth-child(2) .activities__card__image {
+  .activities__col2 a:nth-child(2) .activities__card__image {
     height: 100px;
   }
 
-  .activities__col4 div:nth-child(1) .activities__card__image,
-  .activities__col4 div:nth-child(2) .activities__card__image {
+  .activities__col4 a:nth-child(1) .activities__card__image,
+  .activities__col4 a:nth-child(2) .activities__card__image {
     height: 100px;
   }
 }
