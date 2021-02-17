@@ -134,20 +134,26 @@ body {
 .searchbar-container {
   width: 90%;
   margin: auto;
+  display: flex;
+  margin-top: 20px;
 }
 
 .searchbar {
-  margin-top: 20px;
-  width: 300px;
-  height: 40px;
+  max-width: 500px;
   display: flex;
+  align-items: center;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  border-radius: 10px;
 }
 
 .searchbar__marker {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 15%;
+  height: 100%;
   background-color: #f2f2f2;
   border-radius: 10px 0 0 10px;
 }
@@ -156,18 +162,21 @@ body {
   width: 55%;
   font-size: 16px;
   border: none;
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
+  height: 50px;
+  padding-left: 5px;
+}
+
+.searchbar__input:focus {
+  outline: none;
 }
 
 .searchbar__button {
-  display: block;
   width: 30%;
-  background-color: #0065fc;
   height: 100%;
+  background-color: #0065fc;
   border-radius: 0 10px 10px 0;
   color: white;
-  border: transparent;
+  border: none;
   cursor: pointer;
 }
 
@@ -181,6 +190,7 @@ body {
   .searchbar {
     width: 90%;
     margin-left: auto;
+    margin-right: auto;
   }
 
   .searchbar__button {
@@ -188,12 +198,13 @@ body {
   }
 
   .searchbar__input {
-    width: 60%;
+    margin: auto;
   }
 
   .searchbar__button--icon {
     display: block;
     width: 15%;
+    height: 50px;
     background-color: #0065fc;
     color: white;
     border-radius: 10px;
@@ -636,7 +647,7 @@ body {
   .activities__col2,
   .activities__col3,
   .activities__col4 {
-    justify-content: none;
+    justify-content: start;
     margin: auto;
     margin-bottom: 20px;
     width: 100%;
