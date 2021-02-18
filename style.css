@@ -3,11 +3,6 @@
   padding: 0;
 }
 
-@font-face {
-  font-family: "Raleway";
-  src: url(./fonts/Raleway-VariableFont_wght.ttf) format("truetype");
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -160,9 +155,9 @@ body {
 
 .searchbar__input {
   width: 55%;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
-  height: 50px;
+  height: 45px;
   padding-left: 5px;
 }
 
