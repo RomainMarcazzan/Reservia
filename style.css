@@ -114,12 +114,13 @@ body {
 }
 
 .title__big {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: 20px;
+  font-weight: 900;
 }
 
 .title__small {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
   margin-top: 10px;
 }
@@ -134,7 +135,7 @@ body {
 }
 
 .searchbar {
-  max-width: 500px;
+  width: 350px;
   display: flex;
   align-items: center;
   border-top: 1px solid #f2f2f2;
@@ -156,8 +157,9 @@ body {
 .searchbar__input {
   width: 55%;
   font-size: 14px;
+  font-weight: bold;
   border: none;
-  height: 45px;
+  height: 40px;
   padding-left: 5px;
 }
 
@@ -172,6 +174,8 @@ body {
   border-radius: 0 10px 10px 0;
   color: white;
   border: none;
+  font-weight: 600;
+  font-size: 0.8;
   cursor: pointer;
 }
 
@@ -199,7 +203,7 @@ body {
   .searchbar__button--icon {
     display: block;
     width: 15%;
-    height: 50px;
+    height: 40px;
     background-color: #0065fc;
     color: white;
     border-radius: 10px;
@@ -223,24 +227,26 @@ body {
 }
 
 .filters__title {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 900;
   margin-right: 20px;
 }
 
 .filters__category {
   display: flex;
   align-items: center;
-  border: 2px solid #f2f2f2;
+  border: 2px solid lightgray;
   border-radius: 40px;
   margin: 5px;
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 
 .filters__category__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -1.5px;
+  margin: -2px;
   background-color: #deebff;
   border-radius: 20px;
   width: 40px;
@@ -287,21 +293,22 @@ body {
   margin-bottom: 20px;
 }
 
+.info p {
+  font-size: 0.9rem;
+}
+
 .info__icon {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 
-  min-width: 20px;
-  max-width: 20px;
-  max-height: 20px;
-  min-height: 20px;
-
+  height: 20px;
+  width: 20px;
   margin-right: 10px;
 
   border: 2px solid #f2f2f2;
-  border-radius: 40px;
+  border-radius: 20px;
   font-size: 12px;
   color: #0065fc;
 }
@@ -328,6 +335,7 @@ body {
 .results__title {
   font-size: 1.2rem;
   margin-left: 20px;
+  font-weight: 900;
   padding: 20px;
 }
 
@@ -426,7 +434,8 @@ body {
 }
 
 .popular__title {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 
 .popular__title-icon {
@@ -551,7 +560,7 @@ body {
 
 .activities_container__title {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 20px;
 }
 
@@ -716,6 +725,6 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     row-gap: 10px;
     margin-top: 20px;
-    padding: 20px 0 0 20px;
+    padding: 30px;
   }
 }
