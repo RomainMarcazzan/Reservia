@@ -96,6 +96,8 @@ body {
     width: 50%;
     justify-content: center;
     height: 50px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .navbar__item:hover {
